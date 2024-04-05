@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.app {
+    width: 100w;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    min-width: 300px;
+    min-height: 400px;
+    border: 5px solid lightgray;
+    padding: 20px 10px;
+    border-radius: 12px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.board__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.item {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 5px 0;
+    cursor: grab;
+    transition: all 0.5s ease-out allow-discrete;
+}
+
+.item:hover {
+    border: 1px solid darkblue;
+    background: #4880FF;
+    font-size: 1.6rem;
+}
