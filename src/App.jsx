@@ -8,6 +8,7 @@ const App = () => {
     { id: 3, title: "Ну крч сделал уже", items: [{ id: 7, title: "учить пхп" }, { id: 8, title: "играть" }, { id: 9, title: "деградировать" }] },
   ])
 
+
   const [currentBoard, setCurrentBoard] = useState(null)
   const [currentItem, setCurrentItem] = useState(null)
 
@@ -82,3 +83,4 @@ const App = () => {
 }
 
 export default App;
+
