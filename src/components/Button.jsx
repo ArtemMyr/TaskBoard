@@ -4,19 +4,16 @@ import ModalWindow from './ModalWindow';
 
 import '../style/Button.scss';
 
-const Button = () => {
+
+const Button = ({ onAdd }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
-  const handleClick = (e) => {
-    e.preventDefault();
-
-    if (!isAnimating) {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setIsAnimating(false);
-      }, 700);
-    }
+  const handleClick = () => {
+    setIsAnimating(true);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 700);
 
     setShowModal(true);
   };
@@ -27,13 +24,15 @@ const Button = () => {
 
   return (
     <>
-      <button className={ `bubbly-button ${isAnimating ? 'animate' : ''}` } onClick = { handleClick}>
+      <button className={`bubbly-button ${isAnimating ? 'animate' : ''}`} onClick={handleClick}>
         Add +
       </button>
-      {showModal && <ModalWindow onClose={handleCloseModal} />}
+      {showModal && <ModalWindow onClose={handleCloseModal} onAdd={onAdd} />}
     </>
   );
 };
 
 export default Button;
+
+
 
